@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Touch of Healing Massage Therapy | Colorado Springs, CO</title>
+  <meta name="description" content="Professional massage therapy in Colorado Springs, CO. Deep tissue, Swedish relaxation, prenatal, sports massage and more. 5-star rated. Call (719) 447-5653." />
+  <meta name="keywords" content="massage therapy Colorado Springs, deep tissue massage, Swedish massage, prenatal massage, sports massage, Colleen massage" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MassageTherapist",
+    "name": "A Touch of Healing Massage Therapy, LLC",
+    "image": "https://yourdailyrealtor-ctrl.github.io/touch-of-healing/img/hero.jpg",
+    "url": "https://yourdailyrealtor-ctrl.github.io/touch-of-healing/",
+    "telephone": "(719) 447-5653",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4291 Austin Bluffs Pkwy Suite 203",
+      "addressLocality": "Colorado Springs",
+      "addressRegion": "CO",
+      "postalCode": "80918",
+      "addressCountry": "US"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "144"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "10:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "15:00"
+      }
+    ],
+    "priceRange": "$$",
+    "servesCuisine": "Massage Therapy"
+  }
+  </script>
+
+  <style>
+    /* ─── Design Tokens ─── */
+    :root {
+      --sage:   #8a9e8c;
+      --stone:  #c4b8a8;
+      --deep:   #1e1e18;
+      --warm:   #2e2b24;
+      --cream:  #f8f4ee;
+      --linen:  #ede8df;
+      --gold:   #b89b6a;
+      --muted:  #7a7268;
+      --border: rgba(180,165,140,0.18);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --nav-h: 72px;
+      --max-w: 1240px;
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--warm);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: var(--font-body); cursor: pointer; }
+
+    /* ─── Grain Overlay ─── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ─── Nav ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(248,244,238,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 0 clamp(1.5rem, 5vw, 3rem);
+    }
+    .nav-inner {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--warm);
+    }
+    .nav-logo span { color: var(--sage); }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.25s var(--ease);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s var(--ease);
+    }
+    .nav-links a:hover { color: var(--warm); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.4rem;
+      background: var(--sage);
+      color: var(--cream) !important;
+      border-radius: 100px;
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      transition: background 0.25s var(--ease), transform 0.2s var(--ease) !important;
+    }
+    .nav-cta:hover { background: var(--warm) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--warm);
+      border-radius: 2px;
+      transition: transform 0.3s var(--ease), opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-h); left: 0; right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem clamp(1.5rem, 5vw, 3rem);
+      z-index: 999;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--warm);
+      letter-spacing: 0.04em;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    /* ─── Page Sections ─── */
+    .page { display: none; padding-top: var(--nav-h); min-height: 100vh; }
+    .page.active { display: block; }
+
+    /* ─── HERO ─── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - var(--nav-h));
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 6vw, 5rem);
+      max-width: 640px;
+      margin-left: auto;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--deep);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--sage);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 440px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.85rem 2rem;
+      background: var(--sage);
+      color: var(--cream);
+      border: none;
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.25s var(--ease), transform 0.2s var(--ease), box-shadow 0.25s var(--ease);
+    }
+    .btn-primary:hover {
+      background: var(--warm);
+      box-shadow: 0 8px 30px rgba(138,158,140,0.35);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.85rem 2rem;
+      background: transparent;
+      color: var(--warm);
+      border: 1px solid var(--stone);
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: border-color 0.25s var(--ease), color 0.25s var(--ease), transform 0.2s var(--ease);
+    }
+    .btn-outline:hover {
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+    .hero-stars {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+    .stars-label { font-size: 0.825rem; color: var(--muted); }
+    .stars-label strong { color: var(--warm); }
+
+    /* Hero Image */
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transform-origin: center center;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1)    translateX(0)     translateY(0); }
+      33%  { transform: scale(1.08) translateX(-1%)   translateY(-1%); }
+      66%  { transform: scale(1.05) translateX(1%)    translateY(-0.5%); }
+      100% { transform: scale(1)    translateX(0)     translateY(0); }
+    }
+    .hero-image img {
+      animation: kenBurns 20s ease-in-out infinite;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-image img { animation: none; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(248,244,238,0.15) 0%, transparent 40%);
+    }
+
+    /* ─── About Strip ─── */
+    .about-strip {
+      background: var(--linen);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem clamp(1.5rem, 5vw, 3rem);
+    }
+    .about-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .about-images img {
+      width: 100%; height: 260px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .about-images img:first-child {
+      grid-row: span 2;
+      height: 100%;
+    }
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--deep);
+      margin-bottom: 1.25rem;
+    }
+    .section-title em { font-style: italic; color: var(--sage); }
+    .section-body {
+      font-size: 0.975rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Hours Table */
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin-top: 1.5rem;
+    }
+    .hours-table td {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .hours-table td:first-child { color: var(--muted); width: 55%; }
+    .hours-table td:last-child { color: var(--warm); font-weight: 500; }
+    .hours-table tr:last-child td { border-bottom: none; }
+
+    /* ─── SERVICES PAGE ─── */
+    .services-hero {
+      background: var(--warm);
+      padding: 5rem clamp(1.5rem, 5vw, 3rem) 3rem;
+      text-align: center;
+    }
+    .services-hero .section-title { color: var(--cream); }
+    .services-hero .section-eyebrow { color: var(--gold); }
+    .services-hero .section-body { color: var(--stone); max-width: 560px; margin: 0 auto 0; }
+
+    .services-grid-section {
+      padding: 5rem clamp(1.5rem, 5vw, 3rem);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      position: relative;
+      background: var(--linen);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2.5rem 2rem;
+      overflow: hidden;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(138,158,140,0.12), rgba(184,155,106,0.08));
+      opacity: 0;
+      transition: opacity 0.35s var(--ease);
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(30,30,24,0.1); }
+    .service-card:hover::before { opacity: 1; }
+    .service-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin-bottom: 0.75rem;
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .service-tag {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.25rem 0.75rem;
+      background: rgba(138,158,140,0.12);
+      color: var(--sage);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ─── REVIEWS PAGE ─── */
+    .reviews-hero {
+      background: linear-gradient(135deg, var(--sage) 0%, var(--deep) 100%);
+      padding: 5rem clamp(1.5rem, 5vw, 3rem) 4rem;
+      text-align: center;
+    }
+    .reviews-hero .section-eyebrow { color: rgba(255,255,255,0.6); }
+    .reviews-hero .section-title { color: var(--cream); }
+    .reviews-aggregate {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .big-rating {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1;
+    }
+    .rating-detail .stars { font-size: 1.4rem; display: block; margin-bottom: 0.25rem; }
+    .rating-detail span { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+
+    .reviews-grid-section {
+      padding: 5rem clamp(1.5rem, 5vw, 3rem);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: var(--linen);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+    .review-card:nth-child(odd):hover  { transform: rotate(-1deg) translateY(-4px); box-shadow: 0 16px 40px rgba(30,30,24,0.12); }
+    .review-card:nth-child(even):hover { transform: rotate(1deg)  translateY(-4px); box-shadow: 0 16px 40px rgba(30,30,24,0.12); }
+    .review-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .review-text {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--deep);
+      margin-bottom: 1.25rem;
+    }
+    .review-author {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .reviews-cta {
+      text-align: center;
+      padding: 3rem clamp(1.5rem, 5vw, 3rem) 5rem;
+    }
+    .reviews-cta p { color: var(--muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+    /* ─── CONTACT PAGE ─── */
+    .contact-hero {
+      background: var(--linen);
+      padding: 5rem clamp(1.5rem, 5vw, 3rem) 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .contact-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      padding: 5rem clamp(1.5rem, 5vw, 3rem);
+    }
+    .contact-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin-bottom: 1.5rem;
+    }
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    .contact-icon {
+      width: 40px; height: 40px;
+      background: rgba(138,158,140,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    .contact-item-text { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    .contact-item-text strong { display: block; color: var(--warm); font-weight: 500; margin-bottom: 0.15rem; }
+    .contact-item-text a { color: var(--sage); transition: color 0.2s; }
+    .contact-item-text a:hover { color: var(--warm); }
+
+    /* Map */
+    .map-embed {
+      width: 100%;
+      height: 280px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .map-embed iframe {
+      width: 100%; height: 100%;
+      border: none;
+      filter: grayscale(20%) saturate(0.85);
+    }
+
+    /* Form */
+    .contact-form-wrap h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin-bottom: 1.5rem;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--warm);
+      outline: none;
+      transition: border-color 0.25s var(--ease);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--sage); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      margin-top: 1.5rem;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--deep);
+      color: rgba(248,244,238,0.5);
+      padding: 3rem clamp(1.5rem, 5vw, 3rem);
+      text-align: center;
+    }
+    footer .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+    }
+    footer p { font-size: 0.8rem; line-height: 1.7; }
+    footer a { color: var(--stone); transition: color 0.2s; }
+    footer a:hover { color: var(--cream); }
+
+    /* ─── Floating Call Button ─── */
+    #floatCall {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 5000;
+      background: var(--sage);
+      color: var(--cream);
+      border: none;
+      border-radius: 100px;
+      padding: 0.85rem 1.6rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      box-shadow: 0 8px 32px rgba(30,30,24,0.25);
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.25s var(--ease), transform 0.2s var(--ease);
+      text-decoration: none;
+    }
+    #floatCall:hover { background: var(--warm); transform: scale(1.04); }
+    #floatCall.visible { display: flex; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-image { height: 50vw; min-height: 300px; order: -1; }
+      .hero-text { margin: 0; max-width: 100%; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-images { order: -1; grid-template-columns: 1fr 1fr; }
+      .about-images img:first-child { grid-row: auto; height: 220px; }
+      .about-images img { height: 180px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      #floatCall { bottom: 1rem; right: 1rem; padding: 0.7rem 1.2rem; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="#" onclick="showPage('home')">A Touch of <span>Healing</span></a>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('services')">Services</a></li>
+        <li><a href="#" onclick="showPage('reviews')">Reviews</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="tel:7194475653" class="nav-cta">Call Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home'); closeMobile()">Home</a>
+    <a href="#" onclick="showPage('services'); closeMobile()">Services</a>
+    <a href="#" onclick="showPage('reviews'); closeMobile()">Reviews</a>
+    <a href="#" onclick="showPage('contact'); closeMobile()">Contact</a>
+    <a href="tel:7194475653" style="color:var(--sage);font-weight:500;">📞 (719) 447-5653</a>
+  </div>
+
+  <!-- ══════════════ HOME PAGE ══════════════ -->
+  <section class="page active" id="page-home">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Colorado Springs, CO · Since day one</p>
+        <h1 class="hero-title">Healing that goes <em>deeper</em> than the surface</h1>
+        <p class="hero-sub">Expert therapeutic massage by Colleen. Whether you're carrying chronic tension, recovering from strain, or simply need to breathe again — we meet you exactly where you are.</p>
+        <div class="hero-actions">
+          <button class="btn-primary mag-btn" onclick="showPage('contact')">Book a Session</button>
+          <button class="btn-outline mag-btn" onclick="showPage('services')">View Services</button>
+        </div>
+        <div class="hero-stars">
+          <span class="stars">★★★★★</span>
+          <p class="stars-label"><strong>5.0 stars</strong> · 144 Google reviews</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="img/hero.jpg" alt="Professional massage therapy session at A Touch of Healing in Colorado Springs" loading="eager" />
+      </div>
+    </div>
+
+    <!-- About Strip -->
+    <section class="about-strip">
+      <div class="about-inner">
+        <div class="about-images">
+          <img src="img/photo2.jpg" alt="Relaxing spa massage room" />
+          <img src="img/photo3.jpg" alt="Therapeutic massage treatment" />
+          <img src="img/photo4.jpg" alt="Professional massage therapy" />
+        </div>
+        <div class="about-content">
+          <p class="section-eyebrow">About the Practice</p>
+          <h2 class="section-title">A place where <em>tension releases</em> and healing begins</h2>
+          <p class="section-body">Colleen brings years of focused expertise to every session at A Touch of Healing Massage Therapy. Located in Colorado Springs, the practice is built on one principle: your body deserves thoughtful, skilled attention.</p>
+          <p class="section-body">From deep tissue work targeting stubborn pain to gentle Swedish techniques that melt stress away, every treatment is tailored to what you need that day.</p>
+
+          <table class="hours-table" aria-label="Business hours">
+            <tbody>
+              <tr><td>Monday – Friday</td><td>10:00 AM – 6:00 PM</td></tr>
+              <tr><td>Saturday</td><td>10:00 AM – 3:00 PM</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer on home -->
+    <footer>
+      <div class="footer-logo">A Touch of Healing Massage Therapy, LLC</div>
+      <p>4291 Austin Bluffs Pkwy Suite 203, Colorado Springs, CO 80918</p>
+      <p><a href="tel:7194475653">(719) 447-5653</a></p>
+      <p style="margin-top:1.25rem;">&copy; 2026 A Touch of Healing Massage Therapy, LLC. All rights reserved.</p>
+    </footer>
+
+  </section>
+
+  <!-- ══════════════ SERVICES PAGE ══════════════ -->
+  <section class="page" id="page-services">
+
+    <div class="services-hero">
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">Therapeutic services <em>crafted for you</em></h2>
+      <p class="section-body">Every service is tailored to your body's needs. No two sessions are the same — and that's the point.</p>
+    </div>
+
+    <div class="services-grid-section">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3 class="service-name">Deep Tissue Massage</h3>
+          <p class="service-desc">Targeted pressure to release chronic muscle tension, knots, and pain deep in the muscle layers. Ideal for persistent back, neck, and shoulder issues.</p>
+          <span class="service-tag">Pain Relief</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3 class="service-name">Swedish Relaxation</h3>
+          <p class="service-desc">Long, flowing strokes designed to calm the nervous system, ease muscle tension, and bring you into a state of complete relaxation.</p>
+          <span class="service-tag">Relaxation</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3 class="service-name">Full Body Massage (90 min)</h3>
+          <p class="service-desc">A comprehensive 90-minute experience addressing the whole body. Space to truly unwind, decompress, and let every area receive care.</p>
+          <span class="service-tag">90 Minutes</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3 class="service-name">Prenatal Massage</h3>
+          <p class="service-desc">Gentle, supportive therapy tailored for expectant mothers. Relieves pregnancy-related aches, reduces swelling, and supports overall wellbeing.</p>
+          <span class="service-tag">Prenatal</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <h3 class="service-name">Sports Massage</h3>
+          <p class="service-desc">Focused work for athletes and active individuals. Aids recovery, prevents injury, improves flexibility, and supports peak physical performance.</p>
+          <span class="service-tag">Athletic</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <h3 class="service-name">Custom Session</h3>
+          <p class="service-desc">Not sure what you need? Colleen will assess your concerns and combine techniques to create a session that's completely personal to you.</p>
+          <span class="service-tag">Personalized</span>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:3.5rem;">
+        <p style="color:var(--muted);font-size:0.95rem;margin-bottom:1.5rem;">Ready to book your session? Reach out and we'll find the right fit.</p>
+        <button class="btn-primary mag-btn" onclick="showPage('contact')">Schedule an Appointment</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-logo">A Touch of Healing Massage Therapy, LLC</div>
+      <p>4291 Austin Bluffs Pkwy Suite 203, Colorado Springs, CO 80918</p>
+      <p><a href="tel:7194475653">(719) 447-5653</a></p>
+      <p style="margin-top:1.25rem;">&copy; 2026 A Touch of Healing Massage Therapy, LLC. All rights reserved.</p>
+    </footer>
+
+  </section>
+
+  <!-- ══════════════ REVIEWS PAGE ══════════════ -->
+  <section class="page" id="page-reviews">
+
+    <div class="reviews-hero">
+      <p class="section-eyebrow">Client Testimonials</p>
+      <h2 class="section-title">What our <em>clients say</em></h2>
+      <div class="reviews-aggregate">
+        <div class="big-rating">5.0</div>
+        <div class="rating-detail">
+          <span class="stars">★★★★★</span>
+          <span>Based on 144 Google reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid-section">
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I had an incredible experience. My 90-min massage was relaxing and a huge release of tension and stress."</p>
+          <p class="review-author">— Britney B.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Colleen does a wonderful job! Deep tissue for lower back pain — significantly reduced."</p>
+          <p class="review-author">— S.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"A very professional and respectful establishment. Very pleased with the results."</p>
+          <p class="review-author">— K.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The atmosphere is calm and welcoming. Colleen truly listens to what you need and delivers every single time."</p>
+          <p class="review-author">— Google Reviewer</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Best massage I've had in Colorado Springs. I leave feeling like a completely different person."</p>
+          <p class="review-author">— Google Reviewer</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Incredibly skilled and intuitive. She knows exactly where to work without you even having to explain."</p>
+          <p class="review-author">— Google Reviewer</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="reviews-cta">
+      <p>Loved your experience? Share it with others on Google.</p>
+      <a href="https://www.google.com/maps/place/A+Touch+of+Healing+Massage+Therapy" target="_blank" rel="noopener" class="btn-primary mag-btn" style="display:inline-flex;">Leave a Review on Google</a>
+    </div>
+
+    <footer>
+      <div class="footer-logo">A Touch of Healing Massage Therapy, LLC</div>
+      <p>4291 Austin Bluffs Pkwy Suite 203, Colorado Springs, CO 80918</p>
+      <p><a href="tel:7194475653">(719) 447-5653</a></p>
+      <p style="margin-top:1.25rem;">&copy; 2026 A Touch of Healing Massage Therapy, LLC. All rights reserved.</p>
+    </footer>
+
+  </section>
+
+  <!-- ══════════════ CONTACT PAGE ══════════════ -->
+  <section class="page" id="page-contact">
+
+    <div class="contact-hero">
+      <div class="contact-hero-inner">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2 class="section-title">Book your <em>session</em> today</h2>
+        <p class="section-body" style="max-width:520px;">Ready to experience the difference? Fill out the form below or give us a call. We'll find a time that works for you.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Find Us</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Address</strong>
+            4291 Austin Bluffs Pkwy Suite 203<br>Colorado Springs, CO 80918
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            <a href="tel:7194475653">(719) 447-5653</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-item-text">
+            <strong>Hours</strong>
+            Mon–Fri: 10:00 AM – 6:00 PM<br>
+            Saturday: 10:00 AM – 3:00 PM<br>
+            Sunday: Closed
+          </div>
+        </div>
+
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=4291+Austin+Bluffs+Pkwy+Suite+203+Colorado+Springs+CO+80918&output=embed"
+            title="A Touch of Healing Massage Therapy location map"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <h3>Send a Message</h3>
+        <form action="https://formspree.io/f/xyzgkjwp" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(719) 555-0100" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>Deep Tissue Massage</option>
+              <option>Swedish Relaxation</option>
+              <option>Full Body Massage (90 min)</option>
+              <option>Prenatal Massage</option>
+              <option>Sports Massage</option>
+              <option>Custom Session</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about what you're looking for, any areas of concern, or questions you have…"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-primary mag-btn" style="width:100%;justify-content:center;">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footer-logo">A Touch of Healing Massage Therapy, LLC</div>
+      <p>4291 Austin Bluffs Pkwy Suite 203, Colorado Springs, CO 80918</p>
+      <p><a href="tel:7194475653">(719) 447-5653</a></p>
+      <p style="margin-top:1.25rem;">&copy; 2026 A Touch of Healing Massage Therapy, LLC. All rights reserved.</p>
+    </footer>
+
+  </section>
+
+  <!-- Floating Call Button -->
+  <a href="tel:7194475653" id="floatCall" aria-label="Call A Touch of Healing Massage Therapy">
+    📞 Call Now
+  </a>
+
+  <script>
+    // ─── SPA Router ───
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ─── Hamburger ───
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('open');
+      mob.classList.toggle('open');
+    });
+    function closeMobile() {
+      ham.classList.remove('open');
+      mob.classList.remove('open');
+    }
+
+    // ─── Floating Call Button (50% scroll) ───
+    const floatBtn = document.getElementById('floatCall');
+    const checkScroll = () => {
+      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      floatBtn.classList.toggle('visible', scrolled >= 0.5);
+    };
+    window.addEventListener('scroll', checkScroll, { passive: true });
+
+    // ─── Magnetic Buttons ───
+    function initMagnetic() {
+      document.querySelectorAll('.mag-btn').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const cx = rect.left + rect.width  / 2;
+          const cy = rect.top  + rect.height / 2;
+          const dx = (e.clientX - cx) * 0.35;
+          const dy = (e.clientY - cy) * 0.35;
+          btn.style.transform = `translate(${dx}px, ${dy}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = '';
+        });
+      });
+    }
+    initMagnetic();
+    // Re-init when page changes (new buttons visible)
+    const origShow = window.showPage;
+    window.showPage = function(name) {
+      origShow ? origShow(name) : showPage(name);
+      setTimeout(initMagnetic, 50);
+    };
+
+    // ─── Handle nav link clicks without full reload ───
+    document.querySelectorAll('[onclick]').forEach(el => {
+      // already bound via onclick attributes
+    });
+  </script>
+
+</body>
+</html>
